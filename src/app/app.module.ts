@@ -1,16 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
-import { AppComponent } from './app.component';
+
+import { AppComponent } from './app.component'; //Main 
+import { ArtistComponent } from 'src/artists/artist.component'; //Artist
+import { ArtistService } from 'src/artists/artist.service';
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: 
+  [
+    AppComponent,
+    ArtistComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ArtistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

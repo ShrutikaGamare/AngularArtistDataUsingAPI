@@ -1,0 +1,53 @@
+<div class="jumbotron">
+    <div class="container">
+
+        <table class="table table-dark">
+            <thead>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>COVER</th>
+                <th>BIO</th>
+                <th>ALBUMS</th>
+                <th>GENRE</th>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let artist of artists">
+
+                    <td>{{artist.id}}</td>
+                    <td>{{artist.name}}</td>
+                    <td>{{artist.cover}}</td>
+                    <td>{{artist.bio}}</td>
+                    <div>
+                        <table class="table table-striped">
+                            <thead class="bg-success">
+                                <th>AlbumID</th>
+                                <th>Title</th>
+                                <th>Year</th>
+                                <th>Cover</th>
+                                <th>Price</th>
+                            </thead>
+                            <tbody>
+                                <tr id="toStyle" class="table-success" *ngFor="let album of artist.albums">
+                                        <td>{{album.albumId}}</td>
+                                        <td>{{album.title}}</td>
+                                        <td>{{album.year}}</td>
+                                        <td>{{album.cover}}</td>
+                                        <td>{{album.price}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    
+                         
+                    </div>
+                    <td>{{artist.genre}}</td>
+
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
